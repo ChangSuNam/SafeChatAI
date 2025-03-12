@@ -11,7 +11,7 @@ SafeChatAI is a proof-of-concept iOS application demonstrating real-time text sa
 - Converts the model to CoreML's `.mlpackage` format with traced, normalized outputs.
 - Offers a SwiftUI app with real-time classification, profanity filtering, and asynchronous processing.
 
-##Project Components
+## Project Components
 
 ### `fine_tune_mobile_bert.py`
 - **Purpose**: Fine-tunes a pre-trained MobileBERT model for binary safety classification ("safe" vs. "unsafe").
@@ -59,16 +59,16 @@ SafeChatAI is a proof-of-concept iOS application demonstrating real-time text sa
 1. Clone the repo.
 
 2. Create and activate a virtual environment:
-    **"python3 -m venv venv**
+    **python3 -m venv venv**
     **source venv/bin/activate**
 
 3. Install dependencies:
     **pip install -r requirements.txt**
     
-    (torch==2.1.0: PyTorch for model training.
-    transformers==4.35.0: Hugging Face library for MobileBERT.
-    coremltools==8.2: Conversion to CoreML.
-    numpy==1.26.4: Data handling.)
+    - torch==2.1.0: PyTorch for model training.
+    - transformers==4.35.0: Hugging Face library for MobileBERT.
+    - coremltools==8.2: Conversion to CoreML.
+    - numpy==1.26.4: Data handling.
 
 ### Model Generation
 1. Run fine_tune_mobile_bert.py to generate fine_tuned_mobilebert:
@@ -81,7 +81,9 @@ SafeChatAI is a proof-of-concept iOS application demonstrating real-time text sa
 
 ### Xcode Setup
 1. Open SafeChatAIApp/SafeChatAIApp.xcodeproj in Xcode.
+   
 2. Select iPhone 16 Pro simulator (iOS 18.2 or above).
+   
 3. Add FineTunedMobileBERT.mlpackage file created by running convert_mobileBERT.py into SafeChatAIApp folder. Ensure vocab.txt is included in the directory as well (included in commit). If you encounter error running the app, make sure the .mlpackage file is in Copy Bundle Resources. 
 
 ---
