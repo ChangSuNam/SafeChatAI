@@ -3,7 +3,7 @@
 ## Project Overview
 SafeChatAI is a proof-of-concept iOS application demonstrating real-time text safety classification using a fine-tuned MobileBERT model, integrated via CoreML. This project showcases:
 - **AI Safety**: Detects "safe" or "unsafe" text inputs, with a pre-inference regex-based guardrail to filter profanity, aligning with responsible AI deployment.
-- **On-Device Efficiency**: Fine-tunes MobileBERT with 15 epochs on a custom dataset, converts it to CoreML with FLOAT32 precision, and runs inference on iOS with CPU-only configuration and Swift concurrency.
+- **On-Device Efficiency**: Fine-tunes MobileBERT with 15 epochs on a custom dataset, converts it to CoreML with FLOAT32 precision, and runs optimized inference on iOS leveraging all compute units (ANE, GPU, CPU) with Swift concurrency for low-latency performance.
 - **Full-Stack Integration**: Combines Python-based training and model conversion with a SwiftUI interface, demonstrating end-to-end ML deployment.
 
 ### Features
